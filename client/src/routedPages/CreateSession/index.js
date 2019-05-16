@@ -1,7 +1,14 @@
 import React, { Component } from "react";
-import CreateSession from "../../pages/CreateSession/index"
-
+import CreateSession from "../../pages/CreateSession/index";
+import styled, { keyframes } from "styled-components";
+import FadeInRightBig from "@bit/formidablelabs.react-animations.fade-in-right-big";
 import "./style.css";
+const FadeInRightBigAnimation = keyframes`${FadeInRightBig}`;
+const FadeInRightBigDiv = styled.div`
+  animation: 1s ${FadeInRightBigAnimation};
+`;
+
+
 
 class DashboardNav extends Component {
 
@@ -25,7 +32,7 @@ class DashboardNav extends Component {
     return (
       <div className="wrapper">
         <nav id="sidebar" className={buttonClass.join(' ')}>
-          <div className="sidebar-header">
+          <div className="sidebar-header nav-head-text">
             <h3>Jamster</h3>
             
           </div>
@@ -33,19 +40,19 @@ class DashboardNav extends Component {
           <ul className="list-unstyled components">
             <p className="user-name">User Name</p>
             <li>
-              <a href="/dashboard">Dashboard</a>
+              <a className="navBtn" href="/dashboard">Dashboard</a>
             </li>
             <li>
-              <a href="/myProfile">My Profile</a>
+              <a className="navBtn" href="/myProfile">My Profile</a>
             </li>
             <li>
-              <a href="/findSession">Find Session</a>
+              <a className="navBtn" href="/findSession">Find Session</a>
             </li>
             <li>
-              <a href="/createSession">Create Session</a>
+              <a className="navBtn" href="/createSession">Create Session</a>
             </li>
             <li>
-              <a href="/login">Logout</a>
+              <a className="navBtn" href="/login">Logout</a>
             </li>
           </ul>
         </nav>
@@ -53,14 +60,17 @@ class DashboardNav extends Component {
         <button type="button" id="sidebarCollapse" className="button" onClick={this.toggle.bind(this)}>
           <i className="fas fa-arrows-alt-h" />
         </button>
-
+        
         <div className="container main">
+        <FadeInRightBigDiv>
           <div className="card">
             <div className="card-body">
               <CreateSession/>
             </div>
           </div>
+          </FadeInRightBigDiv>
         </div>
+        
       </div>
     );
   }

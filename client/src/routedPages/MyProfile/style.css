@@ -3,6 +3,10 @@
     align-items: stretch;
 }
 
+.nav-head-text {
+    font-family: 'Rock Salt', cursive;
+}
+
 .button:hover {
     color: #000;
 }
@@ -77,15 +81,20 @@ p {
 		1px 1px 0 #000;
 }
 
-a, a:hover, a:focus {
+.navBtn, .navBtn:hover, .navBtn:focus {
     color: inherit;
     text-decoration: none;
     transition: all 0.3s;
+    font-family: 'Rock Salt', cursive;
+    text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
 }
 
 #sidebar {
     /* don't forget to add all the previously mentioned styles here too */
-    background: #ff6060;
     color: #fff;
     transition: all 0.3s;
 }
@@ -141,15 +150,4 @@ h2 {
     padding-left: 100px;
     padding-right: 100px;
     line-height: 50px;
-}
-
-
-
-.delete-btn {
-    color: #ff0000;
-}
-
-
-.modal-to-dashboard {
-    background-color: #ff6060;
 }
