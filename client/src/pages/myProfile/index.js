@@ -53,7 +53,7 @@ class UserInfo extends Component {
                             <img src="https://via.placeholder.com/300x300" alt="null" />
                             <br />
                             <Button variant="info" size="lg" className="mt-2 mr-1">Edit Profile</Button>
-                            <DropdownButton className="mt-2 mr-1" style={{ 'width': '187px' }} id="dropdown-basic-button" title="Add Instrument" size="lg">
+                            <DropdownButton className="mt-2 mr-1" style={{ 'width': '205px' }} id="dropdown-basic-button" title="Add Instrument" size="lg">
                                 <DropdownItem href="#/action-1">Harp</DropdownItem>
                                 <DropdownItem href="#/action-2">Organ</DropdownItem>
                                 <DropdownItem href="#/action-3">Hydrolauphone</DropdownItem>
