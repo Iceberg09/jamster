@@ -14,10 +14,6 @@ import DropdownItem from "react-bootstrap/DropdownItem";
 class UserInfo extends Component {
     state = {
         username: localStorage.getItem("username"),
-        // instruments: {
-        //     instrument: "",
-        //     skillLevel: ""
-        // },
         instruments: '',
         skill: '',
         instrumentArr: []
